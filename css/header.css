@@ -1,0 +1,52 @@
+header,
+#Pesquisa {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    width: 100vw;
+    height: 15vh;
+    justify-content: center;
+    background-color: aquamarine;
+
+    & #Pesquisa {
+        width: 60vw;
+        height: 5vh;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 5vw;
+
+        & #Iput_Pesquisar {
+            margin-left: 1vw;
+            width: 40vw;
+            height: 4vh;
+            font-size: 1vw;
+            border: none;
+            outline: none;
+            /* Dica: remove o contorno ao clicar */
+        }
+
+        & #Pesquisar_lupa {
+            margin-right: 1vw;
+            width: 2vw;
+            font-size: 1vw;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+
+            & #icon_search {
+                background: none;
+            }
+        }
+    }
+}
+
+/* 
+
+PROMPT para CSS no GEMINI
+
+Aplique o conceito de aninhamento (nesting) (que agora é nativo no CSS moderno) e agrupe as propriedades repetidas.
+Também limpe os prefixos -webkit,-moz,etc.,que hoje em dia já não são mais necessários para transições simples,deixando o código muito mais leve.
+
+*/

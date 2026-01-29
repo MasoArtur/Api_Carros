@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api de Carros</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/b39bb922a1.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+        <div id="Pesquisa">
+            <input type="text" placeholder="Digite o carro que deseja procurar" id="Iput_Pesquisar">
+            <button id="Pesquisar_lupa" onclick="BuscarCarros()">
+                <i id="icon_search" class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+        <!-- Here we'll develop the search bar-->
+    </header>
+
+
+    <section id="main_section">
+        <nav id="box_car_Photo">
+            <!-- Inside of this nav will have the function trocarBanner() to switch the car photos -->
+            <div id="photo_1"></div>
+            <div id="photo_2"></div>
+            <div id="photo_3"></div>
+        </nav>
+        <div id="trade_photos_buttons">
+            <!-- this buttons will have an Onclick="trocarBanner(param)" -->
+            <button id="trade_left">
+                <i class="fa-solid fa-magnifying-glass-arrow-left"></i>
+            </button>
+            <button id="trade_right">
+                <i class="fa-solid fa-magnifying-glass-arrow-right"></i>
+            </button>
+        </div>
+        <div id="box_car_description">
+            <h1 id="car_name"> CARRO TAL</h1>
+            <h2 id="car_description"> CARRO DESCRICAO BLLA BA BLA BAL BLA</h2>
+        </div>
+        <!-- Here we'll develop the cards of cars -->
+    </section>
+
+    <section id="models_section">
+        <!-- Here we'll the 3D model -->
+    </section>
+
+
+    <footer>
+        <!-- Here we'll have the credit creator's of the site-->
+         <!-- here we'll have the part of feedback too -->
+    </footer>
+</body>
+
+</html>
