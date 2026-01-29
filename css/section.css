@@ -1,0 +1,101 @@
+#main_section,
+#box_car_description,
+#trade_photos_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main_section {
+    width: 100vw;
+    padding: 5vh 0;
+    gap: 4vh;
+
+    & #box_car_Photo {
+        position: relative;
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        overflow: hidden;
+
+        & div {
+            flex-shrink: 0;
+            width: 100vw;
+            height: 40vh;
+            background-color: var(--color-photo-back);
+            border: 0.1vw solid var(--color-border);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #photo_1 {
+            background-color: var(--color-photo-front);
+        }
+
+        #photo_2 {
+            background-color: #777777;
+        }
+
+        #photo_3 {
+            background-color: #666666;
+        }
+
+        #photo_4 {
+            background-color: #555555;
+        }
+    }
+
+    & #trade_photos_buttons {
+        flex-direction: row;
+        gap: 2vw;
+        z-index: 10;
+
+        & button {
+            background: var(--color-bg-dark);
+            color: var(--color-bg-light);
+            border: none;
+            border-radius: 50%;
+            width: 4vw;
+            height: 4vw;
+            cursor: pointer;
+            transition: transform 0.2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    & #box_car_description {
+        width: 80vw;
+        background-color: var(--color-secondary);
+        padding: 4vh 2vw;
+        text-align: center;
+
+        & #car_name {
+            font-size: 2vw;
+            text-transform: uppercase;
+            margin-bottom: 1vh;
+        }
+
+        & #car_description {
+            font-size: 1.2vw;
+            color: var(--color-text-muted);
+        }
+    }
+}
+
+#models_section {
+    width: 100vw;
+    padding-bottom: 10vh;
+    display: flex;
+    justify-content: center;
+
+    & #models {
+        width: 80vw;
+        height: 60vh;
+        background-color: var(--color-secondary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
