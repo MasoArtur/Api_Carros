@@ -22,6 +22,9 @@
             flex-shrink: 0;
             width: 100vw;
             height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: var(--color-photo-back);
             border: 0.1vw solid var(--color-border);
             transition: transform 0.5s ease-in-out;
@@ -54,8 +57,9 @@
             color: var(--color-bg-light);
             border: none;
             border-radius: 50%;
-            width: 4vw;
-            height: 4vw;
+            width: 3vw;
+            height: 3vw;
+            font-size: 1vw;
             cursor: pointer;
             transition: transform 0.2s;
 

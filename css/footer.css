@@ -1,0 +1,56 @@
+/* Footer Styles com Native Nesting */
+footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-secondary);
+    padding: 2vw 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vw;
+    font-size: 1vw;
+    border-top: 0.1vw solid var(--color-primary);
+
+    .footer-credits {
+        text-align: center;
+        
+        p {
+            font-size: 1vw;
+            margin-bottom: 0.5vw;
+            
+            strong {
+                color: var(--color-primary);
+                letter-spacing: 0.1vw;
+            }
+        }
+    }
+    .footer-actions {
+        display: flex;
+        gap: 2vw;
+
+        a, button {
+            all: unset;
+            cursor: pointer;
+            color: var(--color-secondary);
+            transition: color 0.3s ease, transform 0.2s;
+
+            &:hover {
+                color: var(--color-primary);
+                transform: translateY(-0.5vw);
+            }
+            
+            i {
+                font-size: 1.2vw;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 0.75vw;
+        opacity: 0.7;
+        border-top: 0.1vw solid var(--color-text-muted);
+        padding-top: 1vw;
+        width: 100vw;
+        max-width: 40vw;
+        text-align: center;
+    }
+}
