@@ -8,13 +8,13 @@ header {
     width: 100vw;
     height: 15vh;
     justify-content: center;
-    background-color: aquamarine;
+    background-color: var(--color-primary);
 
     & #Pesquisa {
         width: 60vw;
         height: 5vh;
         justify-content: space-between;
-        background-color: white;
+        background-color: var(--color-bg-light);
         border-radius: 5vw;
 
         & #Iput_Pesquisar {
@@ -24,11 +24,11 @@ header {
             font-size: 1vw;
             border: none;
             outline: none;
-            /* Dica: remove o contorno ao clicar */
+            background: transparent;
         }
 
         & #Pesquisar_lupa {
-            margin-right: 1vw;
+            margin-right: 1.5vw;
             width: 2vw;
             font-size: 1vw;
             border: none;
@@ -36,7 +36,7 @@ header {
             cursor: pointer;
 
             & #icon_search {
-                background: none;
+                color: var(--color-text-main);
             }
         }
     }
