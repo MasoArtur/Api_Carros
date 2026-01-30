@@ -3,7 +3,7 @@
 @import url(./footer.css);
 
 :root {
-    --color-primary: aquamarine;
+    --color-primary: rgb(214, 214, 214);
     --color-secondary: #d1d1d1;
     --color-bg-light: #ffffff;
     --color-bg-dark: #222222;

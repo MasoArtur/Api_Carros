@@ -19,12 +19,21 @@ header {
 
         & #Iput_Pesquisar {
             margin-left: 1vw;
-            width: 40vw;
+            width: 60vw;
             height: 4vh;
             font-size: 1vw;
             border: none;
             outline: none;
             background: transparent;
+            z-index: 1;
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus {
+                -webkit-text-fill-color: var(--color-text-main);
+                -webkit-box-shadow: 0 0 0px 100vw white inset;
+                transition: background-color 5000s ease-in-out 0s;
+            }
         }
 
         & #Pesquisar_lupa {
@@ -34,6 +43,7 @@ header {
             border: none;
             background: transparent;
             cursor: pointer;
+            z-index: 2;
 
             & #icon_search {
                 color: var(--color-text-main);
