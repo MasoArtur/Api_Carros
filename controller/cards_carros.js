@@ -32,17 +32,47 @@ let fotos = document.getElementsByClassName('photo_car_img');
 let titulo = "";
 let descrisao = "";
 let tags = "";
-
+ 
 let resultados = "";
+let resultados2 = "";
+
+
+let boxPhotos = document.querySelector('#main_section');
+
+let divInfo = document.querySelector('#box_car_description');
+
+boxPhotos.innerHTML = "";
+divInfo.innerHTML = "";
 
 
 for(dado of dados){
+    titulo = dado.titulo.toLowerCase();
+    descrisao = dado.descrisao.toLowerCase();
+    tags = dado.tags.toLowerCase();
+    
+   if( titulo.includes(Input_Pesquisar) || 
+    descrisao.includes(Input_Pesquisar) ||
+    tags.includes(Input_Pesquisar)){
 
+    resultados2.innerHTML += `<div class = "card"> </div>`
+    resultados2.innerHTML += `<img src ="${dado.fotos[0]}">`
+
+    resultados.innerHTML += `<div class = "card"> </div>`
+    resultados.innerHTML += `<h2>${dado.titulo}</h2>`
+    resultados.innerHTML += `<p>${dado.descrisao}</p>`
+
+    resultados.innerHTML += `<p>${dado.tags}</p>`
+
+    }
 
     if(!resultados){
         alert("Nenhum carro encontrado");
         return;
     }
+
+    boxPhotos.innerHTML = resultados2;
+    divInfo.innerHTML = resultados;
+
 };
 
 
