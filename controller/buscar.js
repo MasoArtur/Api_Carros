@@ -1,10 +1,12 @@
 
 import { dados } from "../model/dados/dados.js";
 
-export function BuscarCarros() {
     let inputField = document.getElementById('Iput_Pesquisar');
+    let sugestoes = document.getElementById('sugestoes');
+
+export function BuscarCarros() {
     let termoPesquisa = inputField.value.toLowerCase().trim();
-    
+
     let sectionDescricao = document.getElementById('box_car_description');
     let fotos = document.getElementsByClassName('photo_car_img');
 
@@ -12,6 +14,23 @@ export function BuscarCarros() {
         alert("Por favor, busque o nome de um carro");
         return;
     }
+
+    inputField.addEventListener('input', () =>{
+        sugestoes.innerHTML = "";
+
+        if(!termoPesquisa) return;
+
+        const carrosFiltrados = dados.filter(carro => 
+            carro.titulo.toLowerCase().includes(termoPesquisa)
+        );
+
+        carrosFiltrados.forEach(carro => {
+            const lista = document.createElement('li');
+            lista.textContent = carro.titulo;
+            sugestoes.appendChild(lista);
+        });
+    });
+
 
     let resultadoEncontrado = null;
 

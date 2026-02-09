@@ -7,12 +7,11 @@ let Input_Pesquisar = document.getElementById('Iput_Pesquisar').value;
 function BuscarCarros(){
 
      if(!Input_Pesquisar.value){
-        section_Cards.innerHTML = "<p>Escreva algo</p>";
     alert("Por favor, busque o nome de um carro");
     return;
     };
 
-    document.getElementById("keydown", function(event){
+    document.addEventListener("keydown", function(event){
         if(event.key === "Enter"){
             BuscarCarros();
         } else{
@@ -137,4 +136,18 @@ for(dado of dados){
 //     }
 
 //     section_Cards.innerHTML = resultados;
+// }
+
+
+
+// input.addEventListener("input", () => {
+//    // pega valor atual
+//    // filtra
+//    // mostra sugestões
+// });
+
+// function BuscarCarros() {
+//    // pega valor atual
+//    // procura nos dados
+//    // mostra resultado
 // }
